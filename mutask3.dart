@@ -5,7 +5,7 @@
 import 'dart:io';
 
 void main() {
-  while(1)
+  while(true)
   {
     //Menu for Calculator
     print("Welcome to Basic Calculator!");
@@ -20,8 +20,12 @@ void main() {
     print("8. Exit");
 
     //Reading choice from user
-    stdout.write("Enter your choice (1-7): ");
+    stdout.write("Enter your choice (1-8): ");
     int choice = int.parse(stdin.readLineSync()!);
+    if(choice==8)
+    {
+      break;
+    }
 
     //Reading inputs from user
     stdout.write("Enter the first number: ");
@@ -65,10 +69,6 @@ void main() {
     else if(choice==7)
     {
       print("Comparison: $num1 == $num2 = ${num1 == num2}");
-    }
-    else if(choice==7)
-    {
-      break;
     }
     //Handling invalid choice
     else {
